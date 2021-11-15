@@ -1,0 +1,45 @@
+.mainProfile{
+    width: 60vh;
+    height: 50vh;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2vh;
+    border-color: #222;
+    border-style: solid;
+    border-width: 0.5vh;
+    font-size: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.Zag{
+    width: 60vh;
+    height: 5vh;
+    margin-top: 2vh;
+}
+.Login{
+    width: 60vh;
+    height: 5vh;
+
+}
+.Mail{
+    width: 60vh;
+    height: 5vh;
+
+}
+.Phone{
+    width: 60vh;
+    height: 5vh;
+
+}
+.Logout{
+    width: 60vh;
+    height: 5vh;
+
+}
+.fotterMargin{
+    width: 100%;
+    height: 1vh;
+    margin-top: 20vh;
+}

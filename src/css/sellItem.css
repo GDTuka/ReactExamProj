@@ -1,0 +1,54 @@
+.RingItem{
+    width: 25vh;
+    height: 50vh;
+}
+.a{
+    color: white;
+    text-decoration: none;
+}
+.ringImg{
+    width: 25vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ringPrice{
+    font-size: 2.5vh;
+    width: 20vh;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ringPop{
+    width: 20vh;
+    font-size: 2vh;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ringTxT{
+    white-space: normal;
+    width: 20vh;
+    height: 5vh;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ringOrderButton{
+    width: 20vh;
+    font-size: 2.5vh;
+    height: 5vh;
+    background-color: #222;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    border-radius: 0.5vh;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.2vh;
+}
+.ringOrderButtonTxT{
+    text-align: center;
+    margin-top: 0.5vh;
+}
