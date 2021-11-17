@@ -2,6 +2,7 @@ import { Component } from "react";
 import SellItem from "./sellItem";
 import '../css/Rings.css'
 import Fotter from './fotter'
+
 class Rings extends Component{
     state={
         items:[]
@@ -16,7 +17,7 @@ class Rings extends Component{
         getItems().then(res=>{
             for(let i =0;i<res.length;i++){
                 if(res[i].type === "Ring"){
-                    allitemsArr.push(<SellItem name={res[i].name}  price={res[i].price} desc={res[i].desc } id={res[i]._id} />)
+                    allitemsArr.push(<SellItem name={res[i].name}  price={res[i].price} desc={res[i].desc } specId={res[i]._id}/>)
                 }
             }
             

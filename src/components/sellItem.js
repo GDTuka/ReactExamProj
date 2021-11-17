@@ -1,25 +1,27 @@
 import { Component } from "react";
+import { Navigate} from "react-router-dom"
+
 import "./../css/sellItem.css"
-import ring from '../photos/rings/ringOne.jpg'
 class SellItem extends Component{
-
-    componentDidMount(){
-        let storage = window.localStorage
-        let orderButton = document.getElementById('orderBtn')
-        orderButton.addEventListener('click',e=>{
-            console.log('1234')
-        })
+    constructor(props) {
+        super(props);
+        this.makeOder = this.makeOder.bind(this)
     }
-
-    render(){
+    componentDidMount(){
         
+    }
+    makeOder(e) {
+        let storage = window.localStorage
+        storage.setItem('orderToken',this.props.specId)
+    }
+    render(){
         return <div className="RingItem" id="RingItem">
-            <img src={ring} className="ringImg" alt = "ring"/>
+            <img src={"/photos/rings/ring1.jpg"} className="ringImg" alt = "ring"/>
             <div className="ringPrice">{this.props.name}</div>
             <div className="ringPrice">Цена {this.props.price}</div>
             <div className="ringPop">Популярность {this.props.pop}%</div>
             <div className="ringTxT">{this.props.desc}</div>
-            <div className="ringOrderButton" id="orderBtn"><div className="ringOrderButtonTxT">Купить</div></div>
+            <div className="ringOrderButton" id="orderBtn" onClick={this.makeOder}><div className="ringOrderButtonTxT">Купить</div></div>
         </div>
     }
 }

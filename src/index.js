@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
-import {BrowserRouter, Link,Routes,Route} from "react-router-dom"
+import {BrowserRouter, Link,Routes,Route,History} from "react-router-dom"
 import App from "./components/main"
 import Rings from "./components/Rings"
 import EarRings from './components/earrings'
@@ -12,10 +12,12 @@ import Profile from './components/profile'
 import Register from './components/register'
 import Admin from './components/adminPage'
 import MakeOrder from './components/makeOrder';
+import Orders from './components/orders';
 
 const getUserData = async() =>{
   let response = await fetch('/userData')
   let data = await response.json()
+  console.log(data)
   return data
 }
 ReactDOM.render(  
@@ -32,9 +34,11 @@ ReactDOM.render(
               <Link to='/' className="navItem">Главная страница</Link>
               <Link to='/Bracelets' className="navItem">Браслеты</Link>
               <Link to='/Necklace' className="navItem">Ожерелья</Link>
+              <Link to="/Orders" className="navItem">Корзина</Link>
               <Link to="/Admin" className="navItem">Админ</Link>
           </div>
           <Routes>
+              <Route path='/Orders' element={<Orders/>}/>
               <Route path="/" element={<App/>}/>
               <Route path="/Rings" element={<Rings/>}/>
               <Route path="/EarRings" element={<EarRings/>}/>
@@ -63,3 +67,9 @@ getUserData().then(res =>{
   }
 })
 
+// Почему не работает очещение куки
+// Как сделать редирект пользователя
+// использовать history.replace (посмотреть как)
+// Проблема с кнопками в sellItem
+// Как добавить фотографию по пути
+// 
