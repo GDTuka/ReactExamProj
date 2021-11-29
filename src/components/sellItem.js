@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { Navigate} from "react-router-dom"
 
 import "./../css/sellItem.css"
 class SellItem extends Component{
@@ -16,13 +15,14 @@ class SellItem extends Component{
     }
     render(){
         return <div className="RingItem" id="RingItem">
-            <img src={"/photos/rings/ring1.jpg"} className="ringImg" alt = "ring"/>
+            <img src={this.props.imgLink} className="ringImg" alt = "ring"/>
             <div className="ringPrice">{this.props.name}</div>
             <div className="ringPrice">Цена {this.props.price}</div>
             <div className="ringPop">Популярность {this.props.pop}%</div>
             <div className="ringTxT">{this.props.desc}</div>
             <div className="ringOrderButton" id="orderBtn" onClick={this.makeOder}><div className="ringOrderButtonTxT">Купить</div></div>
         </div>
+
     }
 }
 export default SellItem

@@ -16,7 +16,10 @@ const ItemSchema = new db.Schema({
     pop:{type:String}
 })
 const OrderSchema = new db.Schema({
-    itemsName:{type:String}
+    itemsName:{type:String},
+    phoneNumber:{type:String},
+    adress:{type:String},
+    userName:{type:String}
 })
 
 const User = db.model('User',UserSchema)

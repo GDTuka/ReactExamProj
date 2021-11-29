@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.empty{
+    display: none;
+    font-size: 3vh;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 3vh;
+    height: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80vh;
+}
+.mainOrder{
+    width: 100vh;
+    height: 80vh;
+    border-color: #222;
+    border-radius: 2vh;
+    border-width: 0.5vh;
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+}
+.orderName{
+    width: 100%;
+    text-align: center;
+    height: 7vh;
+    font-size: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+.orderPrice{
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+}
+.divGivePhone{
+    width: 10vh;
+    height: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+.divGiveAdress{
+    width: 10vh;
+    height: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+.givePhone{
+    width: 20vh;
+    height: 2vh;
+}
+.Submit{
+    width: 60vh;
+    height: 5vh;
+    background-color: #222;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    color: white;
+    text-align: center;
+    font-size: 3vh;
+    cursor: pointer;
+}
+.Img{
+    width: 30vh;
+    height: 30vh;
+}
+.divImg{
+    width: 30vh;
+    height: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+}

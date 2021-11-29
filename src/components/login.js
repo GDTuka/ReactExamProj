@@ -1,5 +1,6 @@
 import { Component } from "react";
 import './../css/login.css'
+import Fotter from "./fotter";
 
 class Login extends Component{
     state ={
@@ -20,7 +21,7 @@ class Login extends Component{
         }
 
         login.addEventListener('click',e=>{
-            let login = document.getElementById('username')
+            let login = document.getElementById('inputLogin')
             let pwd = document.getElementById('password')
             if(login.value !== '' && pwd.value !== ''){
                 sendToLogin({login:login.value,pwd:pwd.value})
@@ -32,7 +33,7 @@ class Login extends Component{
     render(){
 
 
-        return <div className="main" id="main">
+        return <><div className="main" id="main">
          <div className="registration-cssave">
             <div className="form" >
                 <h3 className="text-center">Вход в систему</h3>
@@ -53,6 +54,8 @@ class Login extends Component{
             </div>
         </div>
         </div>
+        <Fotter/>
+        </>
     
     }
 }

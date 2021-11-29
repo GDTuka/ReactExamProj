@@ -34,8 +34,7 @@ ReactDOM.render(
               <Link to='/' className="navItem">Главная страница</Link>
               <Link to='/Bracelets' className="navItem">Браслеты</Link>
               <Link to='/Necklace' className="navItem">Ожерелья</Link>
-              <Link to="/Orders" className="navItem">Корзина</Link>
-              <Link to="/Admin" className="navItem">Админ</Link>
+              <Link to="/MakeOrder" className="navItem">Корзина</Link>
           </div>
           <Routes>
               <Route path='/Orders' element={<Orders/>}/>
@@ -58,9 +57,10 @@ ReactDOM.render(
 );
 let data 
 let profileOrLogin = document.getElementById('shit')
-
+const adminLinks = document.getElementById('adminshit')
 getUserData().then(res =>{
   data = res.login
+  
   if(data !== ''){
     profileOrLogin.innerHTML = data
     profileOrLogin.setAttribute('href','/Profile')

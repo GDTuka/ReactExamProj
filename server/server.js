@@ -1,7 +1,7 @@
 const express = require('express'); 
 const app = express(); 
 const port = process.env.PORT || 5000; 
-const {User,Item} = require('./data/model/model.js')
+const {User,Item,Order} = require('./data/model/model.js')
 const {sign,verify} = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const {createToken} = require('./data/jwt/jwt.js');
@@ -52,8 +52,10 @@ app.get('/userData',async(req,res)=>{
     const user = await User.findOne({login:validtoken.login})
     res.send(user)
 })
-app.get('/logout',async(req,res) =>{
-    res.clearCookie('token')
+app.get('/quit',async(req,res) =>{
+    const accessToken = req.cookies["token"] 
+    res.clearCookie("token")
+    res.send("ok")
 })
 app.post('/item/add',async(req,res)=>{
     const {type,name,price,imgLink,desc} = req.body
@@ -62,6 +64,15 @@ app.post('/item/add',async(req,res)=>{
 app.get('/item/get',async(req,res)=>{
     const data = await Item.find()
     res.json(data)
+})
+app.get('/order/get', async(req,res)=>{
+    const data = await Item.find()
+    res.json(data)
+})
+app.post('/order/send',async(req,res)=>{
+    const {itemsName, phoneNumber,adress,userName} = req.body
+    Order({itemsName:itemsName,phoneNumber:phoneNumber,adress:adress,userName:userName}).save()
+    res.send('ok')
 })
 
 

@@ -15,8 +15,8 @@ class EarRing extends Component{
         }   
         getItems().then(res=>{
             for(let i =0;i<res.length;i++){
-                if(res[i].type === "Ring"){
-                    allitemsArr.push(<SellItem name={res[i].name}  price={res[i].price} desc={res[i].desc} />)
+                if(res[i].type === "earRing"){
+                    allitemsArr.push(<SellItem name={res[i].name}  price={res[i].price} desc={res[i].desc } specId={res[i]._id} imgLink={res[i].imglink}/>)
                 }
             }
             this.setState({items: allitemsArr})
@@ -24,7 +24,7 @@ class EarRing extends Component{
     }
     render(){
         return <div>
-            <div className="main">
+            <div className="mainRings">
                 {this.state.items}
             </div>
             <Fotter/>

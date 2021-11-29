@@ -14,6 +14,19 @@ class Admin extends Component{
                 body: JSON.stringify(body)
             });
         }    
+        const getUserData = async() =>{
+            let response = await fetch('/userData')
+            let data = await response.json()
+            console.log(data)
+            return data
+          }
+        getUserData().then(res=>{
+            console.log(res.login)
+            if (res.login !== 'Admin'){
+                let empty = document.querySelector('.checkifempty')
+                empty.style.display = "none"
+            }
+        })
         let type = document.getElementById('type')
         let imglink = document.getElementById('imgLink')
         let name = document.getElementById('name')
@@ -25,7 +38,7 @@ class Admin extends Component{
         })
     }
     render(){
-        return <div><div className="mainAdmin">
+        return <div className="checkifempty"><div className="mainAdmin">
             <input type="text" placeholder="Тип" id="type" className="name"/>
             <input type="text" placeholder="Ссылка на картинку" id="imgLink" className="name"/>
             <input type="text" placeholder="Название" id="name" className="name"/>

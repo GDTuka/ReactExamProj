@@ -1,6 +1,10 @@
 .RingItem{
     width: 25vh;
-    height: 50vh;
+    margin-left: 10vh;
+}
+.itemsPlace{
+    width: 100%;
+    display: flex;
 }
 .a{
     color: white;
@@ -47,6 +51,7 @@
     border-style: solid;
     border-color: black;
     border-width: 0.2vh;
+    cursor: pointer;
 }
 .ringOrderButtonTxT{
     text-align: center;

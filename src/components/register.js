@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Fotter from "./fotter";
 
 class Register extends Component{
  
@@ -17,15 +18,24 @@ class Register extends Component{
 
         let login = document.getElementById('inputLogin')
         let mail = document.getElementById('mail')
-        let pwd = document.getElementById('pwd')
+        let pwd = document.getElementById('password')
         let phone = document.getElementById('phone')
-        if(login.value !== '' && mail.value !== '' && pwd.value !== '' && phone.value !== ''){
-            sendToRegister({login:login.value,mail:mail.value,pwd:pwd.value,phoneNumber:phone.value})
-        }
+        let btn = document.getElementById('btnEnter')
+        console.log(login)
+        console.log(mail)
+        console.log(pwd)
+        console.log(phone)
+        console.log(btn)
+        btn.addEventListener('click',e=>{
+            if(login.value !== '' && mail.value !== '' && pwd.value !== '' && phone.value !== ''){
+                sendToRegister({login:login.value,mail:mail.value,pwd:pwd.value,phoneNumber:phone.value})
+                console.log('1234')
+            }
+        })
     }
     
     render() {
-        return <div className="main" id="main">
+        return <><div className="main" id="main">
                     <div className="registration-cssave">
                         <div className="form" >
                             <h3 className="text-center">Зарегистрироваться</h3>
@@ -38,11 +48,11 @@ class Register extends Component{
                                     placeholder="Почта" required/>
                             </div>
                             <div className="form-group">
-                                <input className="form-control item" type="password" name="password" minLength="6" id="password"
+                                <input className="form-control item" type="password" name="pwd" minLength="6" id="password"
                                     placeholder="Пароль" required/>
                             </div>
                             <div className="form-group">
-                                <input className="form-control item" type="phone" name="phone" minLength="6" id="phone]"
+                                <input className="form-control item" type="phone" name="phone" minLength="6" id="phone"
                                     placeholder="Номер телефона" required/>
                             </div>
                             <div className="form-group">
@@ -50,7 +60,10 @@ class Register extends Component{
                             </div>
                             </div>
                         </div>
+                        
                     </div>
+                    <Fotter/>
+                    </>
     }
 }
 export default Register

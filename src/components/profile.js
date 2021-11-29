@@ -21,7 +21,7 @@ class Profile extends Component{
             phone.innerHTML +=` ${res.phoneNumber}`
         })
         logout.addEventListener('click', async e=>{
-            await fetch('/logout')
+            await fetch('/quit')
         })
     }
 
